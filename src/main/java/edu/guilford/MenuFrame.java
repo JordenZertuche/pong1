@@ -38,7 +38,9 @@ public class MenuFrame extends JFrame {
 	BufferedImage background;
 	Graphics graphics;
 
-	
+	/*
+	 * Constructor for MenuFrame class
+	 */
 	MenuFrame() {
 		final JLabel panel = new JLabel();
 				userFile = Path.of("/menuImage.png");
@@ -47,6 +49,10 @@ public class MenuFrame extends JFrame {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
+				/*
+				 * this is the background image for the menu frame
+				 * also the buttons are created here
+				 */
 		this.setTitle("PONG GAME MENU");
 		this.setResizable(false);
 		this.setBackground(Color.black);
