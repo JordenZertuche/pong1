@@ -18,7 +18,11 @@ class PauseMenuFrame extends JFrame {
 	private static final int frameWidth = 400;
 	private static final int frameHeight = 200;
 	public static GameFrame game;
-
+	/*
+	 * Constructor for PauseMenuFrame class
+	 * will pause the game when the pause button is pressed
+	 * game can be restarted or exited from this menu
+	 */
 	PauseMenuFrame() {
 		final JPanel panel = new JPanel();
 		this.setTitle("PAUSE MENU");
@@ -37,7 +41,11 @@ class PauseMenuFrame extends JFrame {
 
 		this.setVisible(true);
 		this.add(panel);
-
+/*
+ * action listener for the return button
+ * will return to the game when pressed
+ * will dispose of the pause menu frame
+ */
 		returnButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
 				System.out.println("");

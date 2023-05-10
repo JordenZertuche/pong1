@@ -53,6 +53,10 @@ public class GamePanel extends JPanel implements Runnable {
 	public static String winner;
 	public static String player1, player2;
 
+	/*
+	 * method creates the mane game functions and insitalizes the game objects
+	 * uses the mainbg.png file as the background image
+	 */
 	GamePanel() {
 		newPaddles();
 		newBall();
@@ -372,6 +376,10 @@ public class GamePanel extends JPanel implements Runnable {
 			newPaddles();
 			newBall();
 
+			/*
+			 * if (gameMode == false) { newAIPaddle(); }
+			 * keeps the AI paddle in the game
+			 */
 			if (gameMode == false) {
 
 				newAIPaddle();
@@ -456,6 +464,12 @@ public class GamePanel extends JPanel implements Runnable {
 		}
 	}
 
+	/*
+	 * description: method to run the game loop and to check the difficulty
+	 * level of the game and to change the color of the ball if the difficulty
+	 * level is set to hard.
+	 *
+	 */
 	public class AL extends KeyAdapter {
 		public void keyPressed(KeyEvent e) {
 			if (control1 == false) {

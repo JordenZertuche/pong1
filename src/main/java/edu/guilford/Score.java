@@ -9,6 +9,15 @@ public class Score extends Rectangle{
 	int player1;
 	int player2;
 	
+	/*
+	 * Constructor for Score class
+	 * @param GAME_WIDTH the width of the game
+	 * @param GAME_HEIGHT the height of the game
+	 * @return none
+	 * @throws none
+	 *  
+	 * used when displaying the score within the game
+	 */
 	Score(int GAME_WIDTH, int GAME_HEIGHT){
 		Score.gameWidth = GAME_WIDTH;
 		Score.gameHeight = GAME_HEIGHT;

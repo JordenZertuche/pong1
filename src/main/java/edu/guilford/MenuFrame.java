@@ -22,6 +22,13 @@ import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
 
+/*
+ * This class creates the menu frame for the pong game. It has two buttons, one
+ * for one player and one for two players. It also has a button to turn the
+ * music off which is not working yet. and would be finished in the future.
+ * as for the images and the background, they are not working yet and would be
+ * finished in the future. as for the prgrams overall functionality, it is working interface wise nicely in a mac computer.
+ */
 public class MenuFrame extends JFrame {
 	public static boolean mod;
 	public static Color ballColor = Color.WHITE;

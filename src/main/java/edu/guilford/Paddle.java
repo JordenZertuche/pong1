@@ -5,6 +5,19 @@ import java.awt.event.*;
 
 public class Paddle extends Rectangle {
 
+	/*
+	 * Paddle class
+	 * paddle is extending rectangle becuase it is a rectangle shape
+	 * as for the colors they are set to the colors of the paddles in the game
+	 * speed and yVelocity are set to 10 because that is the speed of the paddles that are a generally not too fast but not too slow
+	 * @param x the x coordinate of the paddle
+	 * @param y the y coordinate of the paddle
+	 * @param paddleWidth the width of the paddle
+	 * @param paddleHeight the height of the paddle
+	 * @param id the id of the paddle
+	 * 
+	 * 
+	 */
 	private Color onePaddleColor = OnePlayerFrame.paddleColor;
 	private Color twoPaddleColorLeft = TwoPlayerFrame.paddleColorLeft;
 	private Color twoPaddleColorRight = TwoPlayerFrame.paddleColorRight;
@@ -36,7 +49,12 @@ public class Paddle extends Rectangle {
 	public void mouseEntered(MouseEvent e) {
 
 	}
-
+/*
+ * mouseDrag method
+ * 
+ * method for a mouseDrag event
+ * players wishing use their mouse could similar in fashion to those wishing to play on their phone or touch screen
+ */
 	public void mouseDrag(MouseEvent e) {
 		/*
 		 * while (e.getButton() == MouseEvent.BUTTON1){ this.y = e.getY(); dragging =
@@ -49,6 +67,10 @@ public class Paddle extends Rectangle {
 
 	}
 
+	/*
+	 * keyPressed method
+	 * designed to move the paddle when the key is pressed
+	 */
 	public void keyPressed(KeyEvent e) {
 
 		if (id == 1) {
@@ -78,6 +100,14 @@ public class Paddle extends Rectangle {
 
 		}
 	}
+	/*
+	 * keyReleased method
+	 * designed to stop the paddle from moving when the key is released
+	 * @param e the key event
+	 * @return none
+	 * 
+	 * allows for the program to no just keep moving the paddle when the key is held down
+	 */
 
 	public void keyReleased(KeyEvent e) {
 		switch (id) {

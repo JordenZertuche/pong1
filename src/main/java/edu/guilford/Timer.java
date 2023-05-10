@@ -6,6 +6,13 @@ public class Timer {
 	private static long end;
 	private static boolean started;
 
+	/*
+	 * Constructor for Timer class
+	 * starts as soon as the class is called and creates a new instance of the
+	 * Timer class with the start time
+	 * once game is over, the end time is recorded and the time is calculated and printed out
+	 * 
+	 */
 	private static boolean isStopped() {
 		return !started;
 	}
@@ -26,7 +33,9 @@ public class Timer {
 		start = System.nanoTime();
 		started = true;
 	}
-
+/*
+ * error handling for when the timer is not started
+ */
 	public static void stop() {
 		if (isStarted()) {
 			stopTimer();
@@ -48,6 +57,11 @@ public class Timer {
 		}
 
 	}
+
+	/*
+	 * @return seconds
+	 * part of the code that calculates the time in seconds
+	 */
 
 	public static double getTimeSec() {
 		double seconds = (double) getTime() / 1000000000.0; // saniye

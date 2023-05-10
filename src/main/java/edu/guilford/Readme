@@ -1,0 +1,25 @@
+Overall outline of the gampeplay
+
+to move the cursor for a single player game against an AI once must use the
+W, S Keys in order for the cursor to move up and down respectively. to change 
+the colors and other settings it will be done prior to starting the game in the player frame.
+the same applies to the 2 player frame where W, S move player ones paddle, and the up and down arrow keys move player 2's paddle.
+
+this is using the default key board method which is the larger of the two boxes listed to the left of the single player fram the smaller mouse is when a player wished to use their 
+mouse instead of their keyboard, particularly useful if a player were to play on mobile using this program.
+
+the game is won when the entered max amount of ten is reached between either two players or the AI in question
+the game is lost when the ball passes the paddle of the player in question
+the game is paused when the space bar is pressed
+the game is resumed when the space bar is pressed again
+the game is restarted when the R key is pressed
+the game is exited when the escape key is pressed
+
+becareful too not start to many games at one time as there is a bug relating too a two player choice when two windows of the instance are at in
+music traditionally can be turned on and off when pressing the music button (WIP)
+
+based on the ai prefrence that is chosen the AI will adjust accordingly and gradually regardless of game mode will shift and react to your choices so that it can match your playstyle
+
+
+Main reasoning for this program
+To create a simple and challenging game that would allow for a player to enjoy pong both alone and with friends while having their stats displayed so they can keep track of how they play.
