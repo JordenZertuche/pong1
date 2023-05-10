@@ -18,7 +18,12 @@ import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingUtilities;
 
-
+/*
+ * This class creates the frame for the two player menu. It allows the user to
+ * enter their names and choose the color of the ball and paddles. It also
+ * allows the user to choose the score limit for the game.
+ * 
+ */
 public class TwoPlayerFrame extends JFrame {
 
 	public static String player1;
@@ -32,7 +37,11 @@ public class TwoPlayerFrame extends JFrame {
 	private static final int frameHeight = 400;
 	public static GameFrame game;
 	public static int scoreLimit;
-
+/*
+ * This is the constructor for the TwoPlayerFrame class. It creates the frame
+ * and adds the buttons and labels to the frame.
+ * 
+ */
 	TwoPlayerFrame() {
 
 		final JLabel panel = new JLabel(new ImageIcon("tpb.png"));
@@ -54,7 +63,9 @@ public class TwoPlayerFrame extends JFrame {
 		JButton back = new JButton(icon);
 		back.setBounds(10, 310, 50, 50);
 		panel.add(back);
-
+/*
+ * continuing on from the one player frame this is just coded to enable two users to play
+ */
 		JLabel title = new JLabel();
 		title.setText("2 PLAYER MENU");
 		title.setFont(new java.awt.Font("Arial Black", Font.BOLD, 20));
@@ -138,7 +149,13 @@ public class TwoPlayerFrame extends JFrame {
 		this.setVisible(true);
 
 		this.add(panel);
-
+/*
+ * this is the action listener for the start button
+ * it takes the user input and sets the variables to the user input
+ * it also prints out the user input to the console
+ * it also calls the pong class and passes the variables to it
+ * it also disposes of the frame
+ */
 		startButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
 				if (user1.getText().length() > 1)

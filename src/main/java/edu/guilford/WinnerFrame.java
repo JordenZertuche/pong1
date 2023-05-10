@@ -20,6 +20,12 @@ public class WinnerFrame extends JFrame {
 	private static final int frameHeight = 500;
 	public static GameFrame game;
 
+	/*
+	 * Constructor for WinnerFrame class
+	 * will display the winner of the game
+	 * will display the time it took to win the game
+	 * will display a picture of a trophy (winner.png)
+	 */
 	WinnerFrame() {
 		final JLabel panel = new JLabel(
 				new ImageIcon("winner.png"));
@@ -34,7 +40,16 @@ public class WinnerFrame extends JFrame {
 
 		Timer.stop();
 		double seconds = Timer.getTimeSec();
-
+/*
+ * JLabels for the winner, game time, and match score
+ * JLabels are set to the appropriate font, color, and size
+ * JLabels are added to the panel
+ * panel is added to the frame
+ * frame is set to visible
+ * frame is set to the center of the screen
+ * frame is set to the appropriate size
+ * frame is set to not be resizable
+ */
 		JLabel cup = new JLabel();
 		cup.setText("WINNER:");
 		cup.setFont(new java.awt.Font("Arial Black", Font.BOLD, 30));
@@ -63,6 +78,11 @@ public class WinnerFrame extends JFrame {
 		gameTime.setBounds(90, 70, 350, 30);
 		panel.add(gameTime);
 
+		/*
+		 * JLabel matchScore = new JLabel(); matchScore.setText("Match Score: " +
+		 * 		GamePanel.player1 + ": " + GamePanel.score.player1 + " | " + GamePanel.player2 + ": "
+		 */
+
 		JLabel matchScore = new JLabel();
 		matchScore.setText("Match Score: " + GamePanel.player1 + ": " + GamePanel.score.player1 + " | "
 				+ GamePanel.player2 + ": " + GamePanel.score.player2);
@@ -81,7 +101,12 @@ public class WinnerFrame extends JFrame {
 
 		this.setVisible(true);
 		this.add(panel);
-
+/*
+ * Action listener for the return button
+ * will return the user to the menu frame
+ * will dispose of the current frame
+ * will dispose of the game frame
+ */
 		returnButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
 				System.out.println("");
