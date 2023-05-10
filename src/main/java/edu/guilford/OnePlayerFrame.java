@@ -46,7 +46,9 @@ public class OnePlayerFrame extends JFrame {
 	public static void setDifficulty(int difficulty) {
 		OnePlayerFrame.difficulty = difficulty;
 	}
-
+/*
+ * Constructor for OnePlayerFrame class
+ */
 	OnePlayerFrame() {
 
 		final JLabel panel = new JLabel(
@@ -105,6 +107,13 @@ public class OnePlayerFrame extends JFrame {
 		 * coinTitle.setForeground(Color.WHITE); coinTitle.setBounds(345, 60, 170, 30);
 		 * panel.add(coinTitle);
 		 * 
+		 * breif description of coin system JLabel coinDescription = new JLabel();
+		 * coinDescription.setText("1 coin = 1 point"); coinDescription.setFont(new
+		 * 
+		 * this would be added in the event of adding of a coin system aka a shop or rewards for winning games and then using the coins to buy things
+		 * java.awt.Font("Times New Roman", Font.BOLD, 16)); coinDescription.setOpaque(true);
+		 * 
+		 * never reached this point to add a coin system so this is commented out
 		 * 
 		 * JLabel coinAmount = new JLabel(); String coin = String.valueOf(coinValue);
 		 * coinAmount.setText(coin); coinAmount.setFont(new
@@ -121,6 +130,11 @@ public class OnePlayerFrame extends JFrame {
 		levels.setForeground(Color.WHITE);
 		levels.setBounds(570, 180, 200, 20);
 		panel.add(levels);
+
+		/*
+		 * label for the difficulty level of the AI
+		 * pulls from ai paddle to determine the difficulty when the button is clicked
+		 */
 
 		final AbstractButton beginner = new JRadioButton("Beginner", true);
 		beginner.setBounds(620, 200, 100, 40);
@@ -140,6 +154,9 @@ public class OnePlayerFrame extends JFrame {
 		panel.setLayout(null);
 		panel.add(insane);
 
+		/*
+		 * label for the color of the paddle and ball for the player to read and understand what they are changing
+		 */
 		JLabel paddleLabel = new JLabel();
 		paddleLabel.setText("Paddle Color");
 		paddleLabel.setFont(new java.awt.Font("Times New Roman", Font.BOLD, 12));
@@ -177,6 +194,12 @@ public class OnePlayerFrame extends JFrame {
 		spinner.setForeground(Color.WHITE);
 		panel.add(spinner);
 
+		// String array for the colors of the paddle and ball
+		/*
+		 * changes the color of the paddle and ball to the color selected by the user
+		 * when the button is clicked
+		 * colors chosen due to them being bright and easy to see
+		 */
 		String[] colors = new String[] { "WHITE", "BLUE", "RED", "YELLOW" };
 
 		final JComboBox<String> paddleColorComboBox = new JComboBox<>(colors);
@@ -196,7 +219,18 @@ public class OnePlayerFrame extends JFrame {
 		this.setVisible(true);
 
 		this.add(panel);
-
+/*
+ * button to start the game
+ * when the button is clicked the game will start
+ * the game will start with the settings that the user has chosen
+ * the game will also start with the name that the user has chosen
+ * the game will also start with the score limit that the user has chosen
+ * the game will also start with the difficulty level that the user has chosen
+ * the game will also start with the colors that the user has chosen
+ * the game will also start with the controller that the user has chosen
+ * the game will also start with the bot names that the user has been assigned randomly
+ * 
+ */
 		startButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
 				if (user.getText().length() > 1)
@@ -219,7 +253,9 @@ public class OnePlayerFrame extends JFrame {
 				win.dispose();
 			}
 		});
-
+/*
+ * button to go back to the main menu
+ */
 		back.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
 				MenuFrame mf = new MenuFrame();
@@ -269,7 +305,9 @@ public class OnePlayerFrame extends JFrame {
 
 			}
 		});
-
+/*
+ * changes the color of the ball to the color selected by the user
+ */
 		ballColorComboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
 				String selectedColor = (String) ballColorComboBox.getSelectedItem();
@@ -295,7 +333,9 @@ public class OnePlayerFrame extends JFrame {
 
 			}
 		});
-
+/*
+ * changes the difficulty level to beginner
+ */
 		user.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
 				System.out.println("The entered text is: " + user.getText()); 
@@ -316,7 +356,9 @@ public class OnePlayerFrame extends JFrame {
 				difficultyLevel = "BEGINNER";
 			}
 		});
-
+/*
+ * changes the difficulty level to normal
+ */
 		normal.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
 				setDifficulty(2);
@@ -330,7 +372,9 @@ public class OnePlayerFrame extends JFrame {
 				difficultyLevel = "NORMAL";
 			}
 		});
-
+/*
+ * changes the difficulty level to insane
+ */
 		insane.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
 				setDifficulty(3);
