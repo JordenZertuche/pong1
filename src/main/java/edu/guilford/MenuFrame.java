@@ -90,7 +90,17 @@ public class MenuFrame extends JFrame {
 		this.setVisible(true);
 
 		this.add(panel);
-
+/*
+ * this is the action listener for the buttons
+ * the one player button takes you to the one player frame
+ * the two player button takes you to the two player frame
+ * the music on button is not working yet
+ * the music off button turns the music off
+ * the window listener is for the exit button
+ * it asks the user if they are sure they want to exit
+ * if they click yes, the program exits
+ * if they click no, the program stays open
+ */
 		onePlayerButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
 				System.out.println("[ 1 PLAYER MOD - ON ]");
