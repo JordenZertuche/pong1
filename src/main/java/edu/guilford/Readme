@@ -8,6 +8,8 @@ the same applies to the 2 player frame where W, S move player ones paddle, and t
 this is using the default key board method which is the larger of the two boxes listed to the left of the single player fram the smaller mouse is when a player wished to use their 
 mouse instead of their keyboard, particularly useful if a player were to play on mobile using this program.
 
+mouse acts hrough dragging ones paddle with the mouse as one would on their phone with something like a ninja cut warrior game like fruit ninja.
+
 the game is won when the entered max amount of ten is reached between either two players or the AI in question
 the game is lost when the ball passes the paddle of the player in question
 the game is paused when the space bar is pressed
