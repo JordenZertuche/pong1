@@ -1,12 +1,17 @@
 package edu.guilford;
 
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -20,10 +25,19 @@ public class MenuFrame extends JFrame {
 	public static Color ballColor = Color.WHITE;
 	private static final int frameWidth = 800;
 	private static final int frameHeight = 400;
+	BufferedImage background;
+	Graphics graphics;
 
+	
 	MenuFrame() {
-		final JLabel panel = new JLabel(
-				new ImageIcon("/Users/Arman/OneDrive/Documents/GitHub/PongGame/Pong/src/pong/menuImage.png"));
+		try {
+			background = ImageIO.read(this.getClass().getResource("menuImage.png"));
+		} catch (IOException ex) {
+			System.out.println("Image not found");
+		}
+
+		final JLabel panel = new JLabel();
+				new ImageIcon("/Users/Arman/OneDrive/Documents/GitHub/PongGame/Pong/src/pong/menuImage.png");
 		this.setTitle("PONG GAME MENU");
 		this.setResizable(false);
 		this.setBackground(Color.black);

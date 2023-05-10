@@ -22,7 +22,7 @@ public class WinnerFrame extends JFrame {
 
 	WinnerFrame() {
 		final JLabel panel = new JLabel(
-				new ImageIcon("/Users/Arman/OneDrive/Documents/GitHub/PongGame/Pong/src/pong/winner.png"));
+				new ImageIcon("winner.png"));
 		this.setTitle("WINNER");
 		this.setResizable(false);
 		this.setBackground(Color.black);
@@ -73,7 +73,7 @@ public class WinnerFrame extends JFrame {
 		matchScore.setBounds(100, 110, 350, 30);
 		panel.add(matchScore);
 
-		Icon icon = new ImageIcon("/Users/****/eclipse-workspace/sysout/src/pong/pause.png");
+		Icon icon = new ImageIcon("pause.png");
 		JButton returnButton = new JButton(icon);
 		returnButton.setBounds(150, 280, 200, 100);
 		returnButton.setForeground(Color.WHITE);

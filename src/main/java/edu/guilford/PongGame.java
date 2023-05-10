@@ -21,7 +21,7 @@ public class PongGame {
 
 		try {
 
-			File soundFile = new File("/Users/***/eclipse-workspace/sysout/src/pong/music.wav");
+			File soundFile = new File("/Users/Arman/OneDrive/Documents/GitHub/PongGame/Pong/src/pong/musiv.wav");
 			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(soundFile);
 			AudioFormat audioFormat = audioInputStream.getFormat();
 			DataLine.Info info = new DataLine.Info(SourceDataLine.class, audioFormat);

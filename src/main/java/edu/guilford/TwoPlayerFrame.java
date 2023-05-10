@@ -35,7 +35,7 @@ public class TwoPlayerFrame extends JFrame {
 
 	TwoPlayerFrame() {
 
-		final JLabel panel = new JLabel(new ImageIcon("/Users/Arman/OneDrive/Documents/GitHub/PongGame/Pong/src/pong/tpb.png"));
+		final JLabel panel = new JLabel(new ImageIcon("tpb.png"));
 		this.setTitle("2 PLAYER MENU");
 		this.setResizable(false);
 		this.setBackground(Color.black);

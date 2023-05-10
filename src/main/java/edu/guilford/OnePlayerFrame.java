@@ -50,7 +50,7 @@ public class OnePlayerFrame extends JFrame {
 	OnePlayerFrame() {
 
 		final JLabel panel = new JLabel(
-				new ImageIcon("/Users/Arman/OneDrive/Documents/GitHub/PongGame/Pong/src/pong/mainbg.png"));
+				new ImageIcon("mainbg.png"));
 		this.setTitle("1 PLAYER MENU");
 		this.setResizable(false);
 		this.setBackground(Color.black);
@@ -65,17 +65,17 @@ public class OnePlayerFrame extends JFrame {
 		panel.setLayout(null);
 		panel.add(startButton);
 
-		Icon icon = new ImageIcon("/Users/Arman/OneDrive/Documents/GitHub/PongGame/Pong/src/pong/mouse.png");
+		Icon icon = new ImageIcon("mouse.png");
 		JButton mouse = new JButton(icon);
 		mouse.setBounds(10, 100, 70, 85);
 		panel.add(mouse);
 
-		Icon icon2 = new ImageIcon("/Users/Arman/OneDrive/Documents/GitHub/PongGame/Pong/src/pong/keyboard.png");
+		Icon icon2 = new ImageIcon("/keyboard.png");
 		JButton keyboard = new JButton(icon2);
 		keyboard.setBounds(10, 200, 95, 85);
 		panel.add(keyboard);
 
-		Icon icon3 = new ImageIcon("/Users/Arman/OneDrive/Documents/GitHub/PongGame/Pong/src/pong/back.png");
+		Icon icon3 = new ImageIcon("back.png");
 		JButton back = new JButton(icon3);
 		back.setBounds(10, 310, 50, 50);
 		panel.add(back);
