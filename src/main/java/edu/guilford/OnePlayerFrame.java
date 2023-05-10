@@ -290,8 +290,7 @@ public class OnePlayerFrame extends JFrame {
 				if (selectedColor.equals("YELLOW")) {
 					ballColor = Color.YELLOW;
 					ballColorComboBox.setForeground(Color.YELLOW);
-					// System.out.println("The entered text is: " + user.getText()); deneme yaptÄ±m
-					// kalsÄ±n.
+					// System.out.println("The entered text is: " + user.getText());
 				}
 
 			}
@@ -299,8 +298,8 @@ public class OnePlayerFrame extends JFrame {
 
 		user.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent event) {
-				System.out.println("The entered text is: " + user.getText()); // Ã§alÄ±ÅŸmÄ±yor burada ama maksat text i
-																				// almak
+				System.out.println("The entered text is: " + user.getText()); 
+																				
 			}
 		});
 

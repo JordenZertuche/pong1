@@ -17,6 +17,16 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 import java.io.*;
 
+/*
+ * game panel class
+ * initalizes the game objects and sets the game properties
+ * describes the game logic
+ * description of the game logic is in the readme file
+ * listens to the keyboard events and moves the paddles
+ * laysout the game objects on the screen and draws them
+ * each import while listen above.
+ */
+
 public class GamePanel extends JPanel implements Runnable {
 
 	private boolean gameMode = MenuFrame.mod;
@@ -77,6 +87,11 @@ public class GamePanel extends JPanel implements Runnable {
 		else if (score.player2 > 1)
 			Paddle.stop = true;
 	}
+	
+	/*
+	 * game logic used to move the paddles and the ball for the game
+	 *
+	 */
 
 	public void printWinner() {
 		System.out.println("************************************");
@@ -87,7 +102,15 @@ public class GamePanel extends JPanel implements Runnable {
 		System.out.println("Match Score: " + player1 + ": " + score.player1 + " | " + player2 + ": " + score.player2);
 		System.out.println("************************************");
 	}
+	/*
+	 * print statements to print the winner of the game
+	 */
 
+	 /*
+	  * new ball method used to create a new ball as well as taking into account the difficulty of the game that is being 
+	  * played. random assignemnt is used in order for the program to randomly assign a new ball to the game.
+	  placement of the ball is also taken into account in order to make sure that the ball is placed in the middle of the screen so as to not break the logic of game
+	  */
 	public void newBall() {
 		random = new Random();
 
@@ -152,7 +175,9 @@ public class GamePanel extends JPanel implements Runnable {
 					paddleHeight, 3);
 		}
 	}
-
+	/*
+	 * new paddles method used to create new paddles for the game. the difficulty of the game is also taken into account
+	 */
 	public void paint(Graphics g) {
 		image = createImage(getWidth(), getHeight());
 		graphics = image.getGraphics();
@@ -160,6 +185,14 @@ public class GamePanel extends JPanel implements Runnable {
 		g.drawImage(image, 0, 0, this);
 	}
 
+		/*
+		 * paint method used to paint the graphics of the game
+		 *
+		 */
+
+		 /*
+		  * draw method used to draw the graphics of the game
+		  */
 	public void draw(Graphics g) {
 		g.drawImage(background, 0, 0, gameWidth, gameHeight, null);
 		paddle1.draw(g);
@@ -176,6 +209,9 @@ public class GamePanel extends JPanel implements Runnable {
 		Toolkit.getDefaultToolkit().sync();
 
 	}
+	/*
+	 * move method used to move the paddles and the ball for the game
+	 */
 
 	public void move() {
 		paddle1.move();
@@ -194,6 +230,15 @@ public class GamePanel extends JPanel implements Runnable {
 		// paddle2.move();
 	}
 
+	/*
+	 * check collision method used to check the collision of the ball with the paddles and the walls of the game
+	 * if the ball hits the top or bottom of the screen then the ball will bounce off the top or bottom of the screen
+	 * if the ball hits the paddle then the ball will bounce off the paddle
+	 * if the ball hits the left or right side of the screen then the ball will bounce off the left or right side of the screen
+	 * if the ball hits the left or right side of the screen then the score will be updated
+	 * if the ball hits the left or right side of the screen then a new ball will be created
+	 * if the ball hits the left or right side of the screen then the game will be over
+	 */
 	public void checkCollision() {
 
 
@@ -381,6 +426,13 @@ public class GamePanel extends JPanel implements Runnable {
 		}
 	}
 
+	/*
+	 * public void printWinner() { System.out.println(winner + " wins!"); }
+	 * method to print the winner as well as to describe the game modes closing
+	 * prints the amount of time taken using a timer method
+	 * and prints the total score and winners name as well outisde of the timer.
+	 */
+
 	public void run() {
 		// game loop
 		long lastTime = System.nanoTime();
@@ -455,6 +507,12 @@ public class GamePanel extends JPanel implements Runnable {
 
 		}
 	}
+
+	/*
+	 * Handlerclass is a class that implements MouseListener and MouseMotionListener
+	 * and is used to control the paddles using the mouse. usefull for touch screen
+	 * devices.
+	 */
 
 	private class Handlerclass implements MouseListener, MouseMotionListener {
 
