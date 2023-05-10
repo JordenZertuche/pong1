@@ -2,7 +2,22 @@ package edu.guilford;
 
 import java.awt.*;
 import java.util.Random;
-
+/*
+ * class that creates the ball
+ * description:
+ * 	- the ball is the object that bounces around the screen
+ * 	when creating the ball, the constructor takes in the x and y coordinates, the width and height of the ball
+ * 	the ball is always in the center of the screen
+ * 	the ball moves in a random direction when the game starts
+ * 	the ball bounces off of the paddles and the top and bottom of the screen
+ * 	the ball is the object that the player is trying to hit with the paddle
+ * 	the ball is the object that the AI paddle is trying to hit with its paddle
+ * 	the ball is the object that the player is trying to keep from hitting the bottom of the screen
+ *  with the intial basics of the game, the ball class is the most important class as it is the object that the player interacts with the most
+ *  removing this class would not allow the rest of the program to run
+ *  as for the inital speed and its reasoning when tinkering with other speeds aisde from two it would weitehr be too fast or too slow
+ *  two is the perfect speed for the ball to move at initally before the difficulty is changed overtime.
+ */
 public class Ball extends Rectangle {
 
 	private Color beginnerBallColor = OnePlayerFrame.ballColor;

@@ -10,6 +10,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.nio.file.Path;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -20,24 +21,25 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
+
 public class MenuFrame extends JFrame {
 	public static boolean mod;
 	public static Color ballColor = Color.WHITE;
 	private static final int frameWidth = 800;
 	private static final int frameHeight = 400;
+	private static Path userFile;
 	BufferedImage background;
 	Graphics graphics;
 
 	
 	MenuFrame() {
-		try {
-			background = ImageIO.read(this.getClass().getResource("menuImage.png"));
-		} catch (IOException ex) {
-			System.out.println("Image not found");
-		}
-
 		final JLabel panel = new JLabel();
-				new ImageIcon("/Users/Arman/OneDrive/Documents/GitHub/PongGame/Pong/src/pong/menuImage.png");
+				userFile = Path.of("/menuImage.png");
+				try {
+					background = ImageIO.read(userFile.toFile());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 		this.setTitle("PONG GAME MENU");
 		this.setResizable(false);
 		this.setBackground(Color.black);

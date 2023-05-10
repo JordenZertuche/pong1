@@ -6,6 +6,16 @@ import java.awt.Rectangle;
 
 public class AI_paddle extends Rectangle {
 
+	/*
+	 * class that creates the AI paddle
+	 * description:
+	 * 	- the AI paddle is the paddle that the computer controls
+	 *  when creating this paddle, the constructor takes in the x and y coordinates, the width and height of the paddle, the id of the paddle, and the ball
+	 * the AI paddle is always on the right side of the screen
+	 * the AI paddle moves up and down depending on the difficulty of the game
+	 * as the difficulty increases, the AI paddle moves faster
+	 * each difficulty has the paddle shrink to a smaller size
+	 */
 	double yVel;
 	int id;
 	//final double gravity = 0.94;

@@ -30,7 +30,7 @@ class PauseMenuFrame extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setSize(frameWidth, frameHeight);
 
-		Icon icon = new ImageIcon("/Users/Arman/OneDrive/Documents/GitHub/PongGame/Pong/src/pong/pause.png");
+		Icon icon = new ImageIcon("pause.png");
 		JButton returnButton = new JButton(icon);
 		returnButton.setBounds(0, 0, frameWidth, frameHeight);
 		panel.add(returnButton);
